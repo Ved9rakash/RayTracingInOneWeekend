@@ -49,15 +49,22 @@ cmake_ninja_workdir = C$:/Users/Vaibhav/CLionProjects/RayTracingInOneWeekend/cma
 
 build cmake_object_order_depends_target_RayTracingInOneWeekend: phony || CMakeFiles/RayTracingInOneWeekend.dir
 
-build CMakeFiles/RayTracingInOneWeekend.dir/main.cpp.obj: CXX_COMPILER__RayTracingInOneWeekend_Debug C$:/Users/Vaibhav/CLionProjects/RayTracingInOneWeekend/main.cpp || cmake_object_order_depends_target_RayTracingInOneWeekend
-  DEP_FILE = CMakeFiles\RayTracingInOneWeekend.dir\main.cpp.obj.d
+build CMakeFiles/RayTracingInOneWeekend.dir/src/main.cpp.obj: CXX_COMPILER__RayTracingInOneWeekend_Debug C$:/Users/Vaibhav/CLionProjects/RayTracingInOneWeekend/src/main.cpp || cmake_object_order_depends_target_RayTracingInOneWeekend
+  DEP_FILE = CMakeFiles\RayTracingInOneWeekend.dir\src\main.cpp.obj.d
   FLAGS = -g -std=gnu++20
   INCLUDES = -IC:/Users/Vaibhav/CLionProjects/RayTracingInOneWeekend/include -IC:/Users/Vaibhav/CLionProjects/RayTracingInOneWeekend/src
   OBJECT_DIR = CMakeFiles\RayTracingInOneWeekend.dir
-  OBJECT_FILE_DIR = CMakeFiles\RayTracingInOneWeekend.dir
+  OBJECT_FILE_DIR = CMakeFiles\RayTracingInOneWeekend.dir\src
 
 build CMakeFiles/RayTracingInOneWeekend.dir/src/vec3.cpp.obj: CXX_COMPILER__RayTracingInOneWeekend_Debug C$:/Users/Vaibhav/CLionProjects/RayTracingInOneWeekend/src/vec3.cpp || cmake_object_order_depends_target_RayTracingInOneWeekend
   DEP_FILE = CMakeFiles\RayTracingInOneWeekend.dir\src\vec3.cpp.obj.d
+  FLAGS = -g -std=gnu++20
+  INCLUDES = -IC:/Users/Vaibhav/CLionProjects/RayTracingInOneWeekend/include -IC:/Users/Vaibhav/CLionProjects/RayTracingInOneWeekend/src
+  OBJECT_DIR = CMakeFiles\RayTracingInOneWeekend.dir
+  OBJECT_FILE_DIR = CMakeFiles\RayTracingInOneWeekend.dir\src
+
+build CMakeFiles/RayTracingInOneWeekend.dir/src/color.cpp.obj: CXX_COMPILER__RayTracingInOneWeekend_Debug C$:/Users/Vaibhav/CLionProjects/RayTracingInOneWeekend/src/color.cpp || cmake_object_order_depends_target_RayTracingInOneWeekend
+  DEP_FILE = CMakeFiles\RayTracingInOneWeekend.dir\src\color.cpp.obj.d
   FLAGS = -g -std=gnu++20
   INCLUDES = -IC:/Users/Vaibhav/CLionProjects/RayTracingInOneWeekend/include -IC:/Users/Vaibhav/CLionProjects/RayTracingInOneWeekend/src
   OBJECT_DIR = CMakeFiles\RayTracingInOneWeekend.dir
@@ -71,7 +78,7 @@ build CMakeFiles/RayTracingInOneWeekend.dir/src/vec3.cpp.obj: CXX_COMPILER__RayT
 #############################################
 # Link the executable RayTracingInOneWeekend.exe
 
-build RayTracingInOneWeekend.exe: CXX_EXECUTABLE_LINKER__RayTracingInOneWeekend_Debug CMakeFiles/RayTracingInOneWeekend.dir/main.cpp.obj CMakeFiles/RayTracingInOneWeekend.dir/src/vec3.cpp.obj
+build RayTracingInOneWeekend.exe: CXX_EXECUTABLE_LINKER__RayTracingInOneWeekend_Debug CMakeFiles/RayTracingInOneWeekend.dir/src/main.cpp.obj CMakeFiles/RayTracingInOneWeekend.dir/src/vec3.cpp.obj CMakeFiles/RayTracingInOneWeekend.dir/src/color.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\RayTracingInOneWeekend.dir
