@@ -2,10 +2,14 @@
 // Created by Vaibhav on 19-02-2022.
 //
 
+/*
+ * custom Vector 3-D maths header
+ * both for cartesian 3d systems and color(RGB).
+*/
+
 #ifndef RAYTRACINGINONEWEEKEND_VEC3_HPP
 #define RAYTRACINGINONEWEEKEND_VEC3_HPP
 
-#include <cmath>
 #include <iostream>
 
 class vec3 {
@@ -18,6 +22,8 @@ public:
 	[[nodiscard]] double x() const;
 	[[nodiscard]] double y() const;
 	[[nodiscard]] double z() const;
+
+	//Operator overloads.
 	double operator[](int i) const;
 	double& operator[](int i);
 

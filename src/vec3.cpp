@@ -3,6 +3,8 @@
 //
 
 #include "vec3.hpp"
+#include <cmath> 	//For std::sqrt()
+
 
 //Constructors
 vec3::vec3() : cord{0, 0, 0}
@@ -27,6 +29,7 @@ double vec3::z() const
 	return cord[2];
 }
 
+//Operator overloads.
 double vec3::operator[](int i) const
 {
 	return cord[i];
