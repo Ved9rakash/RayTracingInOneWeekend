@@ -39,6 +39,7 @@ public:
 	[[nodiscard]] double length() const;
 	[[nodiscard]] double length_squared() const;
 
+
 public:
 	double cord[3];
 };
@@ -48,16 +49,80 @@ using point3 = vec3;
 using color3 = vec3;
 
 //vec3 utility functions
-inline std::ostream& operator<<(std::ostream &out, const vec3 &v);
-inline vec3 operator+(const vec3 &u, const vec3 &v);
-inline vec3 operator-(const vec3 &u, const vec3 &v);
-inline vec3 operator*(const vec3 &u, const vec3 &v);
-inline vec3 operator*(double t, const vec3 &v);
-inline vec3 operator*(const vec3 &v, double t);
-inline vec3 operator/(const vec3 &v, double t);
-inline double dot(const vec3 &u, const vec3 &v);
-inline vec3 cross(const vec3 &u, const vec3 &v);
-inline vec3 unit_vector(vec3 v);
 
+inline std::ostream& operator<<(std::ostream &out, const vec3 &v)
+{
+	return out << v.cord[0] << ' ' << v.cord[1] << ' ' << v.cord[2];
+}
 
+inline vec3 operator+(const vec3 &u, const vec3 &v)
+{
+	return {
+			u.cord[0] + v.cord[0],
+			u.cord[1] + v.cord[1],
+			u.cord[2] + v.cord[2]
+	};
+}
+
+inline vec3 operator-(const vec3 &u, const vec3 &v)
+{
+	return {
+			u.cord[0] - v.cord[0],
+			u.cord[1] - v.cord[1],
+			u.cord[2] - v.cord[2]
+	};
+}
+
+inline vec3 operator*(const vec3 &u, const vec3 &v)
+{
+	return {
+			u.cord[0] * v.cord[0],
+			u.cord[1] * v.cord[1],
+			u.cord[2] * v.cord[2]
+	};
+}
+
+inline vec3 operator*(double t, const vec3 &v)
+{
+	return {
+			t * v.cord[0],
+			t * v.cord[1],
+			t * v.cord[2]
+	};
+}
+
+inline vec3 operator*(const vec3 &v, double t)
+{
+	return {
+			t * v.cord[0],
+			t * v.cord[1],
+			t * v.cord[2]
+	};
+}
+
+inline vec3 operator/(const vec3 &v, double t)
+{
+	return (1/t) * v;
+}
+
+inline double dot(const vec3 &u, const vec3 &v)
+{
+	return 	u.cord[0]*v.cord[0] +
+			u.cord[1]*v.cord[1] +
+			u.cord[2]*v.cord[2];
+}
+
+inline vec3 cross(const vec3 &u, const vec3 &v)
+{
+	return {
+			u.cord[1] * v.cord[2] - u.cord[2] * v.cord[1],
+			u.cord[2] * v.cord[0] - u.cord[0] * v.cord[2],
+			u.cord[0] * v.cord[1] - u.cord[1] * v.cord[0]
+	};
+}
+
+inline vec3 unit_vector(vec3 v)
+{
+	return v/v.length();
+}
 #endif //RAYTRACINGINONEWEEKEND_VEC3_HPP
