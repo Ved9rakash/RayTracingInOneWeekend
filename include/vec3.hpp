@@ -112,7 +112,7 @@ inline double dot(const vec3 &u, const vec3 &v)
 			u.cord[2]*v.cord[2];
 }
 
-inline vec3 cross(const vec3 &u, const vec3 &v)
+[[maybe_unused]] inline vec3 cross(const vec3 &u, const vec3 &v)
 {
 	return {
 			u.cord[1] * v.cord[2] - u.cord[2] * v.cord[1],
