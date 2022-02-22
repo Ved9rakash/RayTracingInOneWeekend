@@ -11,6 +11,7 @@
 
 namespace color {
 	void write_color(std::ostream &out, color3 pixel_color);
+	bool hit_sphere(const point3& center, double radius, const ray& r);
 	color3 ray_color(const ray& r);
 }
 
